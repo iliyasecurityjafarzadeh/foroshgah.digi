@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>فروشگاه نمونه — Shoply</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    .d-none{
+        display: none;
+    }
+</style>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Shoply</div>
+      <nav class="main-nav" id="mainNav">
+        <a href="#home">خانه</a>
+        <a href="#products">محصولات</a>
+        <a href="#about">درباره</a>
+        <a href="#contact">تماس</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search">
+          <input id="searchInput" placeholder="جستجو..." />
+        </div>
+        <button id="cartBtn" class="icon-btn hidden" aria-label="سبد خرید">🛒 <span id="cartCount" class="cart-count">0</span></button>
+        <button id="hamburger" class="icon-btn hamburger" aria-label="منو">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="https://cdn.videvo.net/videvo_files/video/free/2019-08/large_watermarked/190730_04_Food_1_1080p_preview.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>خوش‌آمدید به Shoply</h1>
+      <p>محصولات منتخب، ارسال سریع، تضمین کیفیت</p>
+
+      <div class="carousel" id="heroCarousel">
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/900x500/?shoes" alt="محصول ۱">
+            <div class="carousel-caption">
+              <h3>کفش ورزشی جدید</h3>
+              <p>خنک و راحت برای تمرین‌های شما</p>
+              <button class="btn add-to-cart" data-id="p1" data-name="کفش ورزشی" data-price="129">افزودن</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/900x500/?watch" alt="محصول ۲">
+            <div class="carousel-caption">
+              <h3>ساعت هوشمند</h3>
+              <p>همگام با زندگی دیجیتال شما</p>
+              <button class="btn add-to-cart" data-id="p2" data-name="ساعت هوشمند" data-price="199">افزودن</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/900x500/?headphones" alt="محصول ۳">
+            <div class="carousel-caption">
+              <h3>هدفون بلوتوث</h3>
+              <p>صدا با نویز کم و باتری بالا</p>
+              <button class="btn add-to-cart" data-id="p3" data-name="هدفون بلوتوث" data-price="89">افزودن</button>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control prev" aria-label="قبلی">‹</button>
+        <button class="carousel-control next" aria-label="بعدی">›</button>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container" id="products">
+    <section class="products-section">
+      <h2>محصولات محبوب</h2>
+      <div class="product-grid" id="productGrid">
+        <article class="product-card" data-id="p1" data-name="کفش ورزشی" data-price="129">
+          <div class="product-media">
+            <img src="https://source.unsplash.com/600x600/?sneakers" alt="">
+          </div>
+          <div class="product-body">
+            <h3>کفش ورزشی</h3>
+            <p class="price">129€</p>
+            <div class="card-actions">
+              <button class="btn outline view-detail">جزئیات</button>
+              <button class="btn add-to-cart" data-id="p1" data-name="کفش ورزشی" data-price="129">افزودن</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-id="p2" data-name="ساعت هوشمند" data-price="199">
+          <div class="product-media">
+            <img src="https://source.unsplash.com/600x600/?smartwatch" alt="">
+          </div>
+          <div class="product-body">
+            <h3>ساعت هوشمند</h3>
+            <p class="price">199€</p>
+            <div class="card-actions">
+              <button class="btn outline view-detail">جزئیات</button>
+              <button class="btn add-to-cart" data-id="p2" data-name="ساعت هوشمند" data-price="199">افزودن</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-id="p3" data-name="هدفون بلوتوث" data-price="89">
+          <div class="product-media">
+            <img src="https://source.unsplash.com/600x600/?headphones" alt="">
+          </div>
+          <div class="product-body">
+            <h3>هدفون بلوتوث</h3>
+            <p class="price">89€</p>
+            <div class="card-actions">
+              <button class="btn outline view-detail">جزئیات</button>
+              <button class="btn add-to-cart" data-id="p3" data-name="هدفون بلوتوث" data-price="89">افزودن</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-id="p4" data-name="کوله‌پشتی" data-price="49">
+          <div class="product-media">
+            <img src="https://source.unsplash.com/600x600/?backpack" alt="">
+          </div>
+          <div class="product-body">
+            <h3>کوله‌پشتی</h3>
+            <p class="price">49€</p>
+            <div class="card-actions">
+              <button class="btn outline view-detail">جزئیات</button>
+              <button class="btn add-to-cart" data-id="p4" data-name="کوله‌پشتی" data-price="49">افزودن</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>درباره ما</h2>
+      <p>Shoply یک فروشگاه نمونه است تا به شما نشان دهد چطور یک سایت فروشگاهی زیبا و ساده بسازید. می‌توانید همه بخش‌ها را شخصی‌سازی کنی.</p>
+    </section>
+  </main>
+
+  <aside id="cartSidebar" class="cart-sidebar d-none" aria-hidden="true">
+    <div class="cart-header">
+      <h3>سبد خرید</h3>
+      <button id="closeCart" class="icon-btn">✕</button>
+    </div>
+    <div class="cart-body" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total">جمع: <strong id="cartTotal">0€</strong></div>
+      <button id="checkoutBtn" class="btn primary">پرداخت</button>
+    </div>
+  </aside>
+
+  <div id="productModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close icon-btn" id="modalClose">✕</button>
+      <div class="modal-grid">
+        <div class="modal-media" id="modalImages">
+          <img src="https://source.unsplash.com/800x800/?product" alt="تصویر" />
+        </div>
+        <div class="modal-info">
+          <h3 id="modalTitle">عنوان محصول</h3>
+          <p id="modalPrice">0€</p>
+          <p id="modalDescription">توضیحات کوتاه درباره محصول.</p>
+          <div class="modal-actions">
+            <button class="btn add-to-cart" data-id="" id="modalAdd">افزودن به سبد</button>
+            <button class="btn outline" id="modalWishlist">افزودن به علاقه‌مندی</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Shoply</h4>
+          <p>آدرس فرضی • ایمیل: info@shoply.example</p>
+        </div>
+        <div>
+          <h4>لینک‌ها</h4>
+          <ul>
+            <li><a href="#home">خانه</a></li>
+            <li><a href="#products">محصولات</a></li>
+            <li><a href="#contact">تماس</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>اشتراک</h4>
+          <p>برای خبرنامه ایمیل خود را ثبت کنید</p>
+          <form id="newsletter">
+            <input placeholder="ایمیل" required />
+            <button class="btn">ثبت</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 Shoply — همه حقوق محفوظ است</div>
+    </div>
+  </footer>
+
+  <button id="toTop" class="to-top" aria-label="بازگشت به بالا">↑</button>
+
+<script src="style.js"></script></body>
+</html>
